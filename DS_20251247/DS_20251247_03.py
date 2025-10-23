@@ -1,0 +1,31 @@
+class DSstudent:
+    def __init__(self, stu_id,name):
+        self.name=name
+        self.stu_id=stu_id
+
+    def show_info(self):
+        print(f"{self.stu_id},이름: {self.name}")
+
+class UndergraduateStudent:
+    def __init__(self,stu_id,name,major):
+        super().__init__(stu_id,name)
+        self.major=major
+
+    def introduce(self):
+        print(f"저는 학부생{self.name}입니다. 전공은{self.major}입니다.")
+
+class GraduateStudent:
+    def __init__(self,stu_id,name,advisor):
+        super().__init__(stu_id,name)
+        self.advisor=advisor
+            
+    def introduce(self):
+        print(f"저는 대힉원생{self.name}입니다. 지도교수님은{self.advisor}입니다.")
+
+
+stu1=UndergraduateStudent("202501","김민수","컴퓨터공학과")
+stu2=GraduateStudent("202401","이수정","홍길동")
+
+stu1.show_info()
+stu2.show_info()
+stu2.introduce()
